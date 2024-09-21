@@ -1,18 +1,17 @@
 class Node:
-    def __init__(self, data1,next1 = None):
+    def __init__(self, data1,next1 =None):
         self.data = data1
         self.next = next1
-        
-        
-def printLL(head):
+
+def ShowLinkedList(head):
     while head is not None:
-        print(head.data, end=' ')
-        head = head.next 
+        print(head.data)
+        head = head.next
+
 def insertAtBegining(head, val):
     temp = Node(val, head)
-    return temp 
-        
-    
+    return temp
+
 arr = [2,3,4]
 val = 1 
 
@@ -21,4 +20,4 @@ head.next = Node(arr[1])
 head.next.next = Node(arr[2])
 
 head = insertAtBegining(head, val)
-printLL(head)
+ShowLinkedList(head)
